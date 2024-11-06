@@ -1,3 +1,4 @@
+// Funnction to generate license badge only if license is not None
 function renderLicenseBadge(license) {
   if (license !== 'None') {
     return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
@@ -5,6 +6,7 @@ function renderLicenseBadge(license) {
   return '';
 }
 
+// Function to generate license link only if license is not None
 function renderLicenseLink(license) {
   if (license !== 'None') {
     return `\n  * [License](#license)\n`;
@@ -12,6 +14,7 @@ function renderLicenseLink(license) {
   return '';
 }
 
+// Function to generate license section only if license is not None
 function renderLicenseSection(license) {
   if (license !== 'None') {
     return `## License 
@@ -20,6 +23,7 @@ function renderLicenseSection(license) {
   return '';
 }
 
+// Function to generate markdown for README
 function generateMarkdown(data) {
   const { title, description, installation, usage, contribution, test, license, username, email } = data;
 
