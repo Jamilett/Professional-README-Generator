@@ -8,17 +8,17 @@ const questions = [
   {
     type: 'input',
     message: 'What is the title of your project?',
-    name: 'title',
+    name: 'title'
   },
   {
     type: 'input',
     message: 'Please provide a description of your project.',
-    name: 'description',
+    name: 'description'
   },
   {
     type: 'input',
     message: 'What are the installation instructions for your project?',
-    name: 'installation',
+    name: 'installation'
   },
   {
     type: 'input',
@@ -28,12 +28,28 @@ const questions = [
   {
     type: 'input',
     message: 'What are the contribution guidelines for your project?',
-    name: 'contribution',
+    name: 'contribution'
   },
   {
     type: 'input',
     message: 'What are the test instructions for your project?',
-    name: 'test',
+    name: 'test'
+  },
+  {
+    type: 'list',
+    message: 'Which license would you like to use?',
+    name: 'license',
+    choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None']
+  },
+  {
+    type: 'input',
+    message: 'What is your GitHub username?',
+    name: 'username'
+  },
+  {
+    type: 'input',
+    message: 'What is your email address?',
+    name: 'email'
   }
 ];
 
@@ -43,7 +59,6 @@ function writeToFile(fileName, data) { }
 // TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions).then((response) => {
-    const { title, description, installation, usage, contribution, test } = response;
     console.log(response);
   });
 }
